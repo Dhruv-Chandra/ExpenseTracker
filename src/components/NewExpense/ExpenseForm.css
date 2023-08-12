@@ -19,8 +19,13 @@
     border: 1px solid #ccc;
     width: 20rem;
     max-width: 100%;
+    background-color: rgb(42, 40, 40);
 }
 
 .new-expense__actions {
     text-align: right;
+}
+
+.new-expense__input{
+    color: white
 }

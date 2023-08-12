@@ -52,7 +52,7 @@ const ExpenseForm = (props) => {
 
         props.onSaveExpenseForm()
 
-        clearForm()        
+        clearForm()
     }
 
     return (
@@ -60,21 +60,40 @@ const ExpenseForm = (props) => {
             <div className='new-expense__controls'>
                 <div className='new-expense__control'>
                     <label>Title</label>
-                    <input type='text' value={userInput.newTitle} onChange={titleChange} />
+                    <input type='text'
+                        value={userInput.newTitle}
+                        onChange={titleChange}
+                        className='new-expense__input'
+                        placeholder='Enter Expense Name'
+                        onFocus={(e) => e.target.placeholder = ''}
+                        onBlur={(e) => e.target.placeholder = 'Enter Expense Name'} />
                 </div>
             </div>
 
             <div className='new-expense__controls'>
                 <div className='new-expense__control'>
                     <label>Date</label>
-                    <input type='date' value={userInput.newDate} min="2019-01-01" max="2022-12-31" onChange={dateChange} />
+                    <input type='date'
+                        value={userInput.newDate}
+                        min="2019-01-01"
+                        max="2022-12-31"
+                        onChange={dateChange}
+                        className='new-expense__input' />
                 </div>
             </div>
 
             <div className='new-expense__controls'>
                 <div className='new-expense__control'>
                     <label>Amount</label>
-                    <input type='number' value={userInput.newAmount} min="0.01" step="0.01" onChange={amountChange} />
+                    <input type='number'
+                        value={userInput.newAmount}
+                        min="0.01"
+                        step="0.01"
+                        onChange={amountChange}
+                        className='new-expense__input'
+                        placeholder='Enter Expense Amount'
+                        onFocus={(e) => e.target.placeholder = ''}
+                        onBlur={(e) => e.target.placeholder = 'Enter Expense Amount'} />
                 </div>
             </div>
             <div className='new-expense__actions'>

@@ -1,0 +1,16 @@
+.expense__filter {
+    margin: 1rem;
+    display: flex;
+    justify-content: space-between;
+    /* padding: 0.5rem; */
+}
+
+.expense__filter_text {
+    color: white;
+    font: inherit;
+    font-weight: bold;
+}
+
+.expense__filter_box {
+    border-radius: 10px;
+}

@@ -37,9 +37,11 @@
 
 .expense-item__button {
     font: inherit;
-    background-color: #40005d;
+    background-color: #350b48;
     color: white;
     margin: 1rem;
+    padding: 0.5rem;
+    border-radius: 10px;
 }
 
 @media (min-width: 580px) {

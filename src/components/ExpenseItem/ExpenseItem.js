@@ -9,7 +9,7 @@ function ExpenseItem(props) {
     const [title, setTitle] = useState(props.expense.title);
 
     const changeTitle = () => {
-        setTitle('Updated!!')
+        setTitle('Updated Title!!')
     }
 
     return (

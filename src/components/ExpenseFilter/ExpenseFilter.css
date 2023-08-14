@@ -1,16 +1,20 @@
 .expense__filter {
-    margin: 1rem;
     display: flex;
-    justify-content: space-between;
-    /* padding: 0.5rem; */
+    align-items: center;
 }
 
 .expense__filter_text {
     color: white;
     font: inherit;
     font-weight: bold;
+    margin: 2rem;
 }
 
 .expense__filter_box {
     border-radius: 10px;
+    height: 1.7rem;
+    width: 4.5rem;
+    background-color: rgb(31, 31, 31);
+    color: white;
+    text-align: center;
 }

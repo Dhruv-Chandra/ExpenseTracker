@@ -4,8 +4,6 @@ import Card from '../Card/Card'
 import ExpenseFilter from "../ExpenseFilter/ExpenseFilter"
 
 const Expenses = (props) => {
-
-
     return (
         <Card className = "expenses">
             <ExpenseFilter></ExpenseFilter>

@@ -7,25 +7,25 @@ import ExpenseFilter from "./components/ExpenseFilter/ExpenseFilter"
 const tempExp = [
   {
     id: '1',
-    title: 'Car Insurance',
+    title: 'Car',
     amount: 295,
     date: new Date(2017, 6, 3)
   },
   {
     id: '2',
-    title: 'Bike Insurance',
+    title: 'Bike',
     amount: 395,
     date: new Date(2018, 7, 4)
   },
   {
     id: '3',
-    title: 'Truck Insurance',
+    title: 'Truck',
     amount: 495,
     date: new Date(2019, 8, 5)
   },
   {
     id: '4',
-    title: 'Cycle Insurance',
+    title: 'Cycle',
     amount: 595,
     date: new Date(2020, 9, 6)
   },
@@ -63,7 +63,6 @@ const App = () => {
   return (
     <div>
       <NewExpense addingExpenseToApp={addExpenseDataOnApp}></NewExpense>
-      {/* <ExpenseFilter expense={expenses}></ExpenseFilter> */}
       <Expenses expense={expenses}></Expenses>
     </div>
   );

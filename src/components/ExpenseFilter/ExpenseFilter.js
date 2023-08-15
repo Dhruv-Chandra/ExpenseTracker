@@ -3,21 +3,6 @@ import './ExpenseFilter.css'
 
 const ExpenseFilter = (props) => {
 
-    const years = [
-        'None',
-        2017,
-        2018,
-        2019,
-        2020,
-        2021,
-        2022,
-        2023
-    ]
-
-    // const years = props.expense.map(
-    //     (exp) => exp.date.getFullYear()
-    // )
-
     const [filterText, setFiltertext] = useState('Nil  ')
 
     const selectValueHandler = (e) => {
@@ -26,7 +11,7 @@ const ExpenseFilter = (props) => {
             tempTextStore = 'Nil  '
         }
         else {
-            for (let year of years) {
+            for (let year of props.years) {
                 if (year.toString() !== e.target.value) {
                     tempTextStore = tempTextStore + year.toString() + ', '
                 }
@@ -40,7 +25,7 @@ const ExpenseFilter = (props) => {
         <div className='expense__filter' >
             <p className='expense__filter_text'>Filter by Year: </p>
             <select className='expense__filter_box' value={props.selected} onChange={selectValueHandler}>
-                {years.map((y) => (
+                {props.years.map((y) => (
                     <option key = {y} value={y.toString()}>{y}</option>
                 ))}
             </select>

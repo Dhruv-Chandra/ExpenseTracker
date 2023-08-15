@@ -16,9 +16,13 @@ const Expenses = (props) => {
         return exp.date.getFullYear().toString() === year
     })
 
+    const years = props.expense.map(
+        (exp) => exp.date.getFullYear()
+    )
+
     return (
         <Card className="expenses">
-            <ExpenseFilter filterYear={getFilterYear}></ExpenseFilter>
+            <ExpenseFilter filterYear={getFilterYear} years = {years}></ExpenseFilter>
 
             {year.toString() === 'None' ? (
                 props.expense.map((exp) => (

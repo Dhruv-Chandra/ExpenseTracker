@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import Expenses from './components/Expenses/Expenses';
 import NewExpense from './components/NewExpense/NewExpense';
+import ExpenseFilter from "./components/ExpenseFilter/ExpenseFilter"
 
 const tempExp = [
   {
@@ -51,7 +52,7 @@ const tempExp = [
 const App = () => {
 
   const [expenses, setExpenses] = useState(tempExp)
-  
+
   const addExpenseDataOnApp = newExpense => {
     setExpenses((prevExpenses) => {
       return [newExpense, ...prevExpenses]
@@ -62,6 +63,7 @@ const App = () => {
   return (
     <div>
       <NewExpense addingExpenseToApp={addExpenseDataOnApp}></NewExpense>
+      {/* <ExpenseFilter expense={expenses}></ExpenseFilter> */}
       <Expenses expense={expenses}></Expenses>
     </div>
   );

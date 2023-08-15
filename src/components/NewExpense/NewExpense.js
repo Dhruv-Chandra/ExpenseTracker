@@ -4,11 +4,12 @@ import './NewExpense.css'
 const NewExpense = (props) => {
     const addExpenseData = (userInput) => {
         const newExpenseData = {
-            id: Math.random.toString(),
+            id: Math.random().toString(),
             title: userInput.newTitle,
             amount: userInput.newAmount,
             date: new Date(userInput.newDate),           
         }
+        console.log(newExpenseData)
         props.addingExpenseToApp(newExpenseData)
     }
 

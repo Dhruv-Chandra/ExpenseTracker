@@ -12,43 +12,23 @@ const Expenses = (props) => {
         setYear(gotYear)
     }
 
-    // const func = (props) => {
-    //     if (props.year === "(None)") {
-    //         props.expense.map((exp) => (
-    //             (<ExpenseItem expense={exp}></ExpenseItem>)
-    //         ))
-    //     }
-    //     else {
-    //         {
-    //             props.expense.map((exp) => (
-    //                 exp.date.getFullYear() === props.year
-    //                     ? (<ExpenseItem expense={exp}></ExpenseItem>)
-    //                     : null
-    //             ))
-    //         }
-    //     }
-    // }
+    const filteredExpenses = props.expense.filter(exp => {
+        return exp.date.getFullYear().toString() === year
+    })
 
     return (
         <Card className="expenses">
             <ExpenseFilter filterYear={getFilterYear}></ExpenseFilter>
-            {/* {console.log(year)} */}
 
-            {/* {() => {
-                year !== "(None)"
-                    ? props.expense.map((exp) => (
-                        console.log(year)
-                        (<ExpenseItem expense={exp}></ExpenseItem>)
-                    ))
-                    : props.expense.map((exp) => (
-                        exp.date.getFullYear() === props.year
-                            ? (<ExpenseItem expense={exp}></ExpenseItem>)
-                            : null
-                    ))
-            }} */}
-            {props.expense.map((exp) => (
-                (<ExpenseItem expense={exp}></ExpenseItem>)
-            ))}
+            {year.toString() === 'None' ? (
+                props.expense.map((exp) => (
+                    (<ExpenseItem key={exp.id} expense={exp}></ExpenseItem>)
+                )
+            )) : (
+                filteredExpenses.map((exp) => (
+                    (<ExpenseItem key={exp.id} expense={exp}></ExpenseItem>)
+                ))
+            )}
         </Card>
     )
 }

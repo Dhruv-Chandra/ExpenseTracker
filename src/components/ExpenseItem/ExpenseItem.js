@@ -15,7 +15,6 @@ const ExpenseItem = (props) => {
 
     return (
         <Card className="expense-item">
-            {console.log(date_of_expense)}
             <ExpenseDate date_of_expense={date_of_expense}></ExpenseDate>
             <div className="expense-item__description">
                 <h2>{title}</h2>

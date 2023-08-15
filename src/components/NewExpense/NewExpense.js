@@ -3,13 +3,11 @@ import './NewExpense.css'
 
 const NewExpense = (props) => {
     const addExpenseData = (userInput) => {
-        // const [year, month, day] = userInput.date.toString().split('-')
-        console.log()
         const newExpenseData = {
-            ...userInput,
-            // date: new Date(year, month, day),
-            date: userInput.date,
-            id: Math.random.toString()
+            id: Math.random.toString(),
+            title: userInput.newTitle,
+            amount: userInput.newAmount,
+            date: new Date(userInput.newDate),           
         }
         props.addingExpenseToApp(newExpenseData)
     }

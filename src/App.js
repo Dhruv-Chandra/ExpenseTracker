@@ -51,7 +51,7 @@ const tempExp = [
 const App = () => {
 
   const [expenses, setExpenses] = useState(tempExp)
-
+  
   const addExpenseDataOnApp = newExpense => {
     setExpenses((prevExpenses) => {
       return [newExpense, ...prevExpenses]

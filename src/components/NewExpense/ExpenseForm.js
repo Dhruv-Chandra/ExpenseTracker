@@ -4,9 +4,9 @@ import { useState } from 'react'
 const ExpenseForm = (props) => {
 
     const [userInput, setUserInput] = useState({
-        newTitle: "",
-        newDate: "",
-        newAmount: "",
+        newTitle: '',
+        newDate: '',
+        newAmount: '',
     })
 
     const titleChange = (event) => {
@@ -50,7 +50,7 @@ const ExpenseForm = (props) => {
     const submitFormHandler = (event) => {
         event.preventDefault()
 
-        props.onSaveExpenseForm()
+        props.onSaveExpenseForm(userInput)
 
         clearForm()
     }
@@ -75,7 +75,7 @@ const ExpenseForm = (props) => {
                     <label>Date</label>
                     <input type='date'
                         value={userInput.newDate}
-                        min="2019-01-01"
+                        min="2019-01-1"
                         max="2022-12-31"
                         onChange={dateChange}
                         className='new-expense__input' />

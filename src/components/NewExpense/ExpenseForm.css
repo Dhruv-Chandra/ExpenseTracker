@@ -27,5 +27,9 @@
 }
 
 .new-expense__input{
-    color: white
+    color: white;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
 }
